@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>RAPIDSL : focusing on good APIs definitions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RAPIDSL is a domain specific language to define APIs and then produce good designed swagger, OpenAPIv3 or even GraphQL interface definitions.">
+    <!-- Begin loading animation -->
+    <link href="assets/css/loaders/loader-pulse.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- End loading animation -->
+    <link href="assets/css/theme.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,600,700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="loader">
+      <div class="loading-animation"></div>
+    </div>
+    <!-- <div class="alert alert-dismissible d-none d-md-block bg-primary text-white py-4 py-md-3 px-0 mb-0 rounded-0 border-0">
+    <div class="container">
+        <div class="row no-gutters align-items-md-center justify-content-center">
+            <div class="col-lg-11 col-md d-flex flex-column flex-md-row align-items-md-center justify-content-lg-center">
+                <div class="mb-3 mb-md-0"><strong>WARNING</strong> this DSL is in BETA and not ready for production.</div>
+                <a class="btn btn-sm btn-light ml-md-3" target="_blank" href=#>Redeem Offer</a>
+            </div>
+            <div class="col-auto position-absolute right">
+                <button type="button" class="close p-0 position-relative" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">
+                        <img src="assets/img/icons/interface/icon-x.svg" alt="Close" class="icon icon-sm bg-white" data-inject-svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div> -->
+    <div class="navbar-container bg-primary-3">
+      <nav class="navbar navbar-expand-lg navbar-dark" data-sticky="top">
+        <div class="container">
+          <a class="navbar-brand navbar-brand-dynamic-color fade-page" href="index.html">
+            <img alt="RAPIDSL" data-inject-svg src="assets/img/rapidsl.svg">
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <section class="bg-primary-3 text-white pb-0 o-hidden">
+      <div class="container">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-xl-5 col-lg-6 text-center text-lg-left mb-4 mb-md-5 mb-lg-0" data-aos="fade-right">
+            <h1 class="display-3">Focusing on API definition</h1>
+            <p class="lead">RAPIDSL lets you focus on defining good APIs.<br/>Then RAPIDSL is translated into good designed Swagger, OpenAPIv3 or even GraphQL.</p>
+            <a href="https://github.com/rapidsl" target="_blank" class="btn btn-lg btn-primary">View on Github</a>
+          </div>
+          <div class="col" data-aos="fade-left" data-aos-delay="250">
+            <img src="assets/img/rapidsl-diagram-1.png" alt="Screenshot" class="img-fluid rounded shadow-lg border">
+          </div>
+        </div>
+      </div>
+      <div class="w-50 h-50 bottom right position-absolute" data-jarallax-element="50">
+        <div class="blob blob-2 bg-gradient w-100 h-100"></div>
+      </div>
+      <div class="w-50 h-50 bottom right position-absolute" data-jarallax-element="75">
+        <div class="blob blob-4 bg-white opacity-10 w-100 h-100"></div>
+      </div>
+      <div class="divider divider-bottom bg-white"></div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4 mb-md-0">
+            <div>
+              <img src="assets/img/icons/theme/general/thunder-move.svg" alt="Lightning icon" class="icon bg-primary" data-inject-svg>
+              <h5 class="mt-4">API acceleration</h5>
+              <div>
+                Allow functional analysts to define the API according to business requirements and delegate the design to templates that comply with the <br/>API Design Guide.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4 mb-md-0">
+            <div>
+              <img src="assets/img/icons/theme/general/bookmark.svg" alt="Bookmark icon" class="icon bg-primary" data-inject-svg>
+              <h5 class="mt-4">API Design guide compliance</h5>
+              <div>
+                Ensure compliance with the API Design Guide and simplify the refactoring to be compliant with the evolutions of the Guide.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4 mb-md-0">
+            <div>
+              <img src="assets/img/icons/theme/design/select.svg" alt="Selection interface icon" class="icon bg-primary" data-inject-svg>
+              <h5 class="mt-4">Highly Customizable</h5>
+              <div>
+                As the IDLs (Swagger, OpenAPIv3, etc) are generated from templates, you could infinitely customize it.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-light o-hidden">
+      <div class="container">
+        <div class="row section-title justify-content-center text-center">
+          <div class="col-md-9 col-lg-8 col-xl-7">
+            <h3 class="display-4">Feature Showcase</h3>
+            <div class="lead">RAPIDSL is intented to solve the gap between functional analysis and <br/> API design, enabling the business analysts to define the API.<br/> The API Design is automated through templates <br/>based on REST principles and your own API Design Guide.</div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <ul class="nav nav-tabs lead mb-4 mb-md-5 justify-content-center" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Entities</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Traits</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Nesting</a>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                  <div class="row align-items-center justify-content-around">
+                    <div class="col-lg-6 col-xl-5 text-center text-lg-left mb-4 mb-md-5 mb-lg-0">
+                      <div class="pr-lg-4 pr-xl-5" data-aos="fade-right">
+                        <h3 class="h1">A great language<br/><mark data-aos="highlight-text" data-aos-delay="250">you'll love to use</mark></h3>
+                        <p>
+                          Think for a moment if designing an API were just describe its attributes and operations. There is no simpler way to do it! The same allows the design to comply with the API Design Guide. It also facilitates refactoring when the Guide evolves.
+                        </p>
+                        <div class="mt-4">
+                          <div class="media rounded align-items-center pl-3 pr-3 pr-md-4 py-2 d-inline-flex text-left shadow-sm bg-white">
+                            <img src="assets/img/avatars/male-4.jpg" alt="Harvey Derwent avatar image" class="avatar avatar-sm flex-shrink-0 mr-3">
+                            <div class="text-dark mb-0">&ldquo;With RAPIDSL we could be working at almost twice the capacity&rdquo;</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-7" data-aos="fade-left">
+                      <img src="assets/img/desktop-app/desktop-app-3.png" alt="Screenshot" class="img-fluid rounded shadow border">
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                  <div class="row align-items-center justify-content-around">
+                    <div class="col-lg-6 col-xl-5 text-center text-lg-left mb-4 mb-md-5 mb-lg-0">
+                      <div class="pr-lg-4 pr-xl-5" data-aos="fade-right">
+                        <h3 class="h1">RAPIDSL<br/>also provides<br/><mark data-aos="highlight-text" data-aos-delay="250">reusable behaviours.</mark></h3>
+                        <p>
+                          Tired of repeating the paging parameters? Tired of looking for how the order is indicated in a list? With RAPIDSL you only indicate the behavior and the template is responsible for implementing it.
+                        </p>
+                        <div class="mt-4">
+                          <div class="media rounded align-items-center pl-3 pr-3 pr-md-4 py-2 d-inline-flex text-left shadow-sm bg-white">
+                            <img src="assets/img/avatars/male-1.jpg" alt="Harvey Derwent avatar image" class="avatar avatar-sm flex-shrink-0 mr-3">
+                            <div class="text-dark mb-0">&ldquo;RAPIDSL increases productivity, avoids errors and reduce risks.&rdquo;</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-7" data-aos="fade-left">
+                      <img src="assets/img/desktop-app/desktop-app-1.png" alt="Screenshot" class="img-fluid rounded shadow border">
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                  <div class="row align-items-center justify-content-around">
+                    <div class="col-lg-6 col-xl-5 text-center text-lg-left mb-4 mb-md-5 mb-lg-0">
+                      <div class="pr-lg-4 pr-xl-5" data-aos="fade-right">
+                        <h3 class="h1">Because things are <mark data-aos="highlight-text" data-aos-delay="250">more complicated</mark>.</h3>
+                        <p>
+                          Nesting indicates the relationship between entities, but you should always respect reuse. RAPIDSL solves nesting very naturally for the business analyst.
+                        </p>
+                        <div class="mt-4">
+                          <div class="media rounded align-items-center pl-3 pr-3 pr-md-4 py-2 d-inline-flex text-left shadow-sm bg-white">
+                            <img src="assets/img/avatars/female-4.jpg" alt="Ashley Mance avatar image" class="avatar avatar-sm flex-shrink-0 mr-3">
+                            <div class="text-dark mb-0">&ldquo;RAPIDSL is a dream come true.&rdquo;</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-7" data-aos="fade-left">
+                      <img src="assets/img/desktop-app/desktop-app-2.png" alt="Screenshot" class="img-fluid rounded shadow border">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-secondary pb-0">
+      <div class="container">
+        <div class="row section-title justify-content-center text-center">
+          <div class="col-md-9 col-lg-8 col-xl-7">
+            <h3 class="display-4">Less work, <mark data-aos="highlight-text" data-aos-delay="250">more flow.</mark></h3>
+            <div class="lead">Let's work on the definition of APIs in business terms without encountering technical or design issues.</div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-xl-9 d-flex flex-wrap justify-content-center">
+            <div class="m-2">
+              <div class="media rounded align-items-center px-3 px-md-4 py-2 py-md-3 bg-white">
+                <img src="assets/img/logos/product/kyan.svg" alt="Kyan logo" class="icon icon-sm mr-3">
+                <h5 class="mb-0">Kyan Boards</h5>
+              </div>
+            </div>
+            <div class="m-2">
+              <div class="media rounded align-items-center px-3 px-md-4 py-2 py-md-3 bg-white">
+                <img src="assets/img/logos/product/atica.svg" alt="Atica logo" class="icon icon-sm mr-3">
+                <h5 class="mb-0">Atica</h5>
+              </div>
+            </div>
+            <div class="m-2">
+              <div class="media rounded align-items-center px-3 px-md-4 py-2 py-md-3 bg-white">
+                <img src="assets/img/logos/product/treva.svg" alt="Treva logo" class="icon icon-sm mr-3">
+                <h5 class="mb-0">Treva</h5>
+              </div>
+            </div>
+            <div class="m-2">
+              <div class="media rounded align-items-center px-3 px-md-4 py-2 py-md-3 bg-white">
+                <img src="assets/img/logos/product/kanba.svg" alt="Kanba logo" class="icon icon-sm mr-3">
+                <h5 class="mb-0">Kanba</h5>
+              </div>
+            </div>
+            <div class="m-2">
+              <div class="media rounded align-items-center px-3 px-md-4 py-2 py-md-3 bg-white">
+                <img src="assets/img/logos/product/tvit.svg" alt="Tvit logo" class="icon icon-sm mr-3">
+                <h5 class="mb-0">Tvit Forms</h5>
+              </div>
+            </div>
+            <div class="m-2">
+              <div class="media rounded align-items-center px-3 px-md-4 py-2 py-md-3 bg-white">
+                <img src="assets/img/logos/product/aven.svg" alt="Aven logo" class="icon icon-sm mr-3">
+                <h5 class="mb-0">Aven</h5>
+              </div>
+            </div>
+            <div class="m-2">
+              <div class="media rounded align-items-center px-3 px-md-4 py-2 py-md-3 bg-white">
+                <img src="assets/img/logos/product/utosia.svg" alt="Utosia logo" class="icon icon-sm mr-3">
+                <h5 class="mb-0">Utosia</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="divider divider-bottom bg-gradient"></div>
+    </section>
+    <section class="p-0">
+      <div class="divider divider-top bg-gradient transform-flip-x"></div>
+      <div class="container">
+        <div class="row section-title justify-content-center text-center">
+          <div class="col-md-9 col-lg-8 col-xl-7">
+            <h3 class="display-4">FAQ</h3>
+            <div class="lead">
+                <p>WARNING : This is an ALPHA release - not for production use.</p>
+                <p>We are still developing the DSL and we want to release this version to get your feedback.</p>
+              </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-10 col-lg-8">
+            <div id="faq-accordion">
+                <div class="card mb-2 mb-md-3">
+                    <a href="#accordion-1" data-toggle="collapse" role="button" aria-expanded="false" class="p-3 p-md-4">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <h6 class="mb-0 mr-2">What is it?</h6>
+                        <img src="assets/img/icons/interface/icon-caret-right.svg" alt="Caret Right" class="icon icon-sm" data-inject-svg>
+                      </div>
+                    </a>
+                    <div class="collapse" id="accordion-1" data-parent="#faq-accordion">
+                      <div class="px-3 px-md-4 pb-3 pb-md-4">This is a specific language intented to be used for defining APIs based on entities like Swagger, Open API or even GraphQL.
+                      </div>
+                    </div>
+                  </div>                  
+    
+                  <div class="card mb-2 mb-md-3">
+                    <a href="#accordion-1" data-toggle="collapse" role="button" aria-expanded="false" class="p-3 p-md-4">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <h6 class="mb-0 mr-2">Why we make it?</h6>
+                        <img src="assets/img/icons/interface/icon-caret-right.svg" alt="Caret Right" class="icon icon-sm" data-inject-svg>
+                      </div>
+                    </a>
+                    <div class="collapse" id="accordion-1" data-parent="#faq-accordion">
+                      <div class="px-3 px-md-4 pb-3 pb-md-4">Because we were tired of supporting business analyst in the swagger definition, frustrated of supervising bad quality swaggers, bored of looking for how the order params must be declared in the design guide, etc.
+                      </div>
+                    </div>
+                  </div>                  
+    
+                  <div class="card mb-2 mb-md-3">
+                    <a href="#accordion-1" data-toggle="collapse" role="button" aria-expanded="false" class="p-3 p-md-4">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <h6 class="mb-0 mr-2">Who make it?</h6>
+                        <img src="assets/img/icons/interface/icon-caret-right.svg" alt="Caret Right" class="icon icon-sm" data-inject-svg>
+                      </div>
+                    </a>
+                    <div class="collapse" id="accordion-1" data-parent="#faq-accordion">
+                      <div class="px-3 px-md-4 pb-3 pb-md-4">A gang of experienced software engineers, believers in the good engineering and the RAML principles.
+                      </div>
+                    </div>
+                  </div>                  
+    
+                  <div class="card mb-2 mb-md-3">
+                    <a href="#accordion-1" data-toggle="collapse" role="button" aria-expanded="false" class="p-3 p-md-4">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <h6 class="mb-0 mr-2">When we make it?</h6>
+                        <img src="assets/img/icons/interface/icon-caret-right.svg" alt="Caret Right" class="icon icon-sm" data-inject-svg>
+                      </div>
+                    </a>
+                    <div class="collapse" id="accordion-1" data-parent="#faq-accordion">
+                      <div class="px-3 px-md-4 pb-3 pb-md-4">During a too hot summer, but we are still working on it. This is the begging. Please, get involved!
+                      </div>
+                    </div>
+                  </div>                  
+    
+                  <div class="card mb-2 mb-md-3">
+                    <a href="#accordion-1" data-toggle="collapse" role="button" aria-expanded="false" class="p-3 p-md-4">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <h6 class="mb-0 mr-2">Where we put it?</h6>
+                        <img src="assets/img/icons/interface/icon-caret-right.svg" alt="Caret Right" class="icon icon-sm" data-inject-svg>
+                      </div>
+                    </a>
+                    <div class="collapse" id="accordion-1" data-parent="#faq-accordion">
+                      <div class="px-3 px-md-4 pb-3 pb-md-4">In GitHub, as usual : <a href="https://github.com/rapidsl/rapidsl-codegen">github.com/rapidsl/rapidsl-codegen</a>
+                      </div>
+                    </div>
+                  </div>                  
+    
+                  <div class="card mb-2 mb-md-3">
+                    <a href="#accordion-1" data-toggle="collapse" role="button" aria-expanded="false" class="p-3 p-md-4">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <h6 class="mb-0 mr-2">How we make it?</h6>
+                        <img src="assets/img/icons/interface/icon-caret-right.svg" alt="Caret Right" class="icon icon-sm" data-inject-svg>
+                      </div>
+                    </a>
+                    <div class="collapse" id="accordion-1" data-parent="#faq-accordion">
+                      <div class="px-3 px-md-4 pb-3 pb-md-4">By now, only using basic handlebars templating.
+                      </div>
+                    </div>
+                  </div>                  
+    
+                  <div class="card mb-2 mb-md-3">
+                    <a href="#accordion-1" data-toggle="collapse" role="button" aria-expanded="false" class="p-3 p-md-4">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <h6 class="mb-0 mr-2">I want to help out, what can I do?</h6>
+                        <img src="assets/img/icons/interface/icon-caret-right.svg" alt="Caret Right" class="icon icon-sm" data-inject-svg>
+                      </div>
+                    </a>
+                    <div class="collapse" id="accordion-1" data-parent="#faq-accordion">
+                      <div class="px-3 px-md-4 pb-3 pb-md-4">Yes, please. See the contributing section at <a href="https://github.com/rapidsl/rapidsl-codegen">github.com/rapidsl/rapidsl-codegen</a>
+                      </div>
+                    </div>
+                  </div>                  
+    
+                  <div class="card mb-2 mb-md-3">
+                    <a href="#accordion-1" data-toggle="collapse" role="button" aria-expanded="false" class="p-3 p-md-4">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <h6 class="mb-0 mr-2">Can I try out the beta?</h6>
+                        <img src="assets/img/icons/interface/icon-caret-right.svg" alt="Caret Right" class="icon icon-sm" data-inject-svg>
+                      </div>
+                    </a>
+                    <div class="collapse" id="accordion-1" data-parent="#faq-accordion">
+                      <div class="px-3 px-md-4 pb-3 pb-md-4">Yes, please! And don't forget to send us the feedback and open issues at <a href="https://github.com/rapidsl/rapidsl-codegen">github.com/rapidsl/rapidsl-codegen</a>
+                      </div>
+                    </div>
+                  </div>                  
+            </div>
+
+          </div>
+        </div>
+        <div class="row justify-content-center mt-4 mt-md-5">
+          <div class="col-auto">
+            <div class="alert bg-light">Still have unanswered questions? <a href="mailto:javier.antoniucci@gmail.com">Get in touch</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="divider divider-bottom bg-primary-3"></div>
+    </section>
+
+    <footer class="bg-primary-3 text-white links-white pb-4 footer-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg mt-2 mt-md-5 mt-lg-0 order-lg-3 order-xl-4">
+            <h5>Interested?</h5>
+            <div class="card card-body bg-white">
+              <p>Show your interest giving us a star in GitHub :
+              <p><a class="github-button" href="https://github.com/rapidsl/rapidsl-codegen" data-size="large" data-show-count="true" aria-label="Star rapidsl/rapidsl-codegen on GitHub">Star</a></p>
+              <p>Do not miss any project update:</p>
+              <p><a class="github-button" href="https://github.com/rapidsl" data-size="large" data-show-count="true" aria-label="Follow @rapidsl on GitHub">Follow @rapidsl</a></p>
+              <p><a class="github-button" href="https://github.com/rapidsl/rapidsl-codegen/subscription" data-size="large" data-show-count="true" aria-label="Watch rapidsl/rapidsl-codegen on GitHub">Watch</a></p>
+              <p>...and you are very welcomed to get involved!</p>
+              <p><a class="github-button" href="https://github.com/rapidsl/rapidsl-codegen/fork" data-size="large" data-show-count="true" aria-label="Fork rapidsl/rapidsl-codegen on GitHub">Fork</a></p>
+              <p><a class="github-button" href="https://github.com/rapidsl/rapidsl-codegen/archive/master.zip" data-size="large" aria-label="Download rapidsl/rapidsl-codegen on GitHub">Download</a></p>
+              <p><a class="github-button" href="https://github.com/rapidsl/rapidsl-codegen/issues" data-size="large" data-show-count="true" aria-label="Issue rapidsl/rapidsl-codegen on GitHub">Issue</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <hr>
+          </div>
+        </div>
+        <div class="row flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-between text-center text-lg-left">
+          <div class="col-auto">
+            <div class="d-flex flex-column flex-sm-row align-items-center text-small">
+              <div class="text-muted">&copy; 2019 The RAPIDSL Team</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto mt-3 mt-lg-0">
+            <ul class="list-unstyled d-flex mb-0">
+              <li class="mx-3">
+                <a href="https://twitter.com/jantoniucci" target="_blank" class="hover-fade-out">
+                  <img src="assets/img/icons/social/twitter.svg" alt="Twitter" class="icon icon-xs bg-white" data-inject-svg>
+                </a>
+              </li>
+              <li class="mx-3">
+                <a href="https://github.com/rapidsl" target="_blank" class="hover-fade-out">
+                  <img src="assets/img/icons/social/github.svg" alt="Github" class="icon icon-xs bg-white" data-inject-svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <a href="#top" class="btn btn-primary rounded-circle btn-back-to-top" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
+      <img src="assets/img/icons/interface/icon-arrow-up.svg" alt="Icon" class="icon bg-white" data-inject-svg>
+    </a>
+    <!-- Required vendor scripts (Do not remove) -->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+
+    <!-- Optional Vendor Scripts (Remove the plugin script here and comment initializer script out of index.js if site does not use that feature) -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <!-- AOS (Animate On Scroll - animates elements into view while scrolling down) -->
+    <script type="text/javascript" src="assets/js/aos.js"></script>
+    <!-- Clipboard (copies content from browser into OS clipboard) -->
+    <script type="text/javascript" src="assets/js/clipboard.min.js"></script>
+    <!-- Fancybox (handles image and video lightbox and galleries) -->
+    <script type="text/javascript" src="assets/js/jquery.fancybox.min.js"></script>
+    <!-- Flatpickr (calendar/date/time picker UI) -->
+    <script type="text/javascript" src="assets/js/flatpickr.min.js"></script>
+    <!-- Flickity (handles touch enabled carousels and sliders) -->
+    <script type="text/javascript" src="assets/js/flickity.pkgd.min.js"></script>
+    <!-- Ion rangeSlider (flexible and pretty range slider elements) -->
+    <script type="text/javascript" src="assets/js/ion.rangeSlider.min.js"></script>
+    <!-- Isotope (masonry layouts and filtering) -->
+    <script type="text/javascript" src="assets/js/isotope.pkgd.min.js"></script>
+    <!-- jarallax (parallax effect and video backgrounds) -->
+    <script type="text/javascript" src="assets/js/jarallax.min.js"></script>
+    <script type="text/javascript" src="assets/js/jarallax-video.min.js"></script>
+    <script type="text/javascript" src="assets/js/jarallax-element.min.js"></script>
+    <!-- jQuery Countdown (displays countdown text to a specified date) -->
+    <script type="text/javascript" src="assets/js/jquery.countdown.min.js"></script>
+    <!-- jQuery smartWizard facilitates steppable wizard content -->
+    <script type="text/javascript" src="assets/js/jquery.smartWizard.min.js"></script>
+    <!-- Plyr (unified player for Video, Audio, Vimeo and Youtube) -->
+    <script type="text/javascript" src="assets/js/plyr.polyfilled.min.js"></script>
+    <!-- Prism (displays formatted code boxes) -->
+    <script type="text/javascript" src="assets/js/prism.js"></script>
+    <!-- ScrollMonitor (manages events for elements scrolling in and out of view) -->
+    <script type="text/javascript" src="assets/js/scrollMonitor.js"></script>
+    <!-- Smooth scroll (animation to links in-page)-->
+    <script type="text/javascript" src="assets/js/smooth-scroll.polyfills.min.js"></script>
+    <!-- SVGInjector (replaces img tags with SVG code to allow easy inclusion of SVGs with the benefit of inheriting colors and styles)-->
+    <script type="text/javascript" src="assets/js/svg-injector.umd.production.js"></script>
+    <!-- TwitterFetcher (displays a feed of tweets from a specified account)-->
+    <script type="text/javascript" src="assets/js/twitterFetcher_min.js"></script>
+    <!-- Typed text (animated typing effect)-->
+    <script type="text/javascript" src="assets/js/typed.min.js"></script>
+    <!-- Required theme scripts (Do not remove) -->
+    <script type="text/javascript" src="assets/js/theme.js"></script>
+    <!-- Removes page load animation when window is finished loading -->
+    <script type="text/javascript">
+      window.addEventListener("load",function(){document.querySelector('body').classList.add('loaded');});
+    </script>
+
+  </body>
+
+</html>
